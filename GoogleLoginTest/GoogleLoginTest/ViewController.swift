@@ -38,7 +38,7 @@ class ViewController: UIViewController,gLoginDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    //Mark:- Google done delegate
+    //Mark:- Google done delegate calling
     func gLoginDone(parameters: [String : String]) {
         print(parameters)
     }
