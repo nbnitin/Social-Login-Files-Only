@@ -11,6 +11,7 @@ import GoogleSignIn
 
 class ViewController: UIViewController,gLoginDelegate {
     
+    //Mark:- Custom delegate or login handler
     var gLogin : GoogleLogin!
     
 
@@ -18,6 +19,9 @@ class ViewController: UIViewController,gLoginDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //Mark:- Google sign in
+        
+        //Using google's default login button
+        
         //adding the delegates
         gLogin = GoogleLogin(vc: self,delegate:self)
         GIDSignIn.sharedInstance().uiDelegate = gLogin
@@ -33,9 +37,20 @@ class ViewController: UIViewController,gLoginDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //Mark:- Google delegate
+    
+    //Mark:- Google done delegate
     func gLoginDone(parameters: [String : String]) {
         print(parameters)
+    }
+    
+    @IBAction func btnLoginCustomButton(_ sender: Any) {
+        //Mark:- Providing delegates
+        GIDSignIn.sharedInstance().delegate = gLogin
+        GIDSignIn.sharedInstance().uiDelegate = gLogin
+        
+        //Mark:- First i am making user log out, then make user login
+        GIDSignIn.sharedInstance().signOut()
+        GIDSignIn.sharedInstance().signIn()
     }
 }
 

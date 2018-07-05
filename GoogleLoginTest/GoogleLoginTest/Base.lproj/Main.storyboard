@@ -17,12 +17,30 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fM2-OA-BRc">
+                                <rect key="frame" x="109" y="617" width="156" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="4ar-m1-9Qj"/>
+                                    <constraint firstAttribute="height" constant="30" id="Uw2-2e-w75"/>
+                                </constraints>
+                                <state key="normal" title="Custom Login Button"/>
+                                <connections>
+                                    <action selector="btnLoginCustomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4vy-Ya-VfB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fM2-OA-BRc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4dD-AT-FbM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fM2-OA-BRc" secondAttribute="bottom" constant="20" id="OXJ-Eh-CrQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="91.304347826086968"/>
         </scene>
     </scenes>
 </document>
